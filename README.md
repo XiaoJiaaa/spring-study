@@ -1,2 +1,3 @@
 # spring-study
-- [第一个spring-boot项目](spring-eureka-server/README.md)
+- [Eureka服务端](spring-eureka-server/README.md)
+- [Eureka客户端](spring-eureka-client/README.md)
