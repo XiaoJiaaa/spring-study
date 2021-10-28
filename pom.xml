@@ -9,7 +9,7 @@
 
     <modules>
         <module>spring-eureka-server</module>
-        <module>spring-eureka-client</module>
+        <module>spring-eureka-client1</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-eureka-client</artifactId>
+    <artifactId>spring-eureka-client1</artifactId>
 
     <dependencies>
         <dependency>
