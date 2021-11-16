@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: gateway-api
+  cloud:
+    gateway:
+      routes:
+        - id: client1
+          #注册中心的服务
+          uri: lb://eureka-client1
+          predicates:
+            - Path=/server1/**
+          filters:
+            #转发请求时去除server1
+            - StripPrefix=1
+
+        - id: client2
+          #服务地址
+          uri: http://127.0.0.1:10002
+          predicates:
+            - Path=/server2/**
+          filters:
+            - StripPrefix=1
+server:
+  port: 10000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9999/eureka/

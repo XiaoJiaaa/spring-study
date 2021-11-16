@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
+        <module>gateway-api</module>
         <module>spring-eureka-server</module>
         <module>spring-eureka-client1</module>
         <module>spring-eureka-client2</module>
