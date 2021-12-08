@@ -28,3 +28,12 @@ spring:
           filters:
             - StripPrefix=1
 ```
+负载均衡测试
+修改client2项目application.yml
+```
+spring:
+  application:
+    name: eureka-client1
+```
+
+启动项目后连续访问 [查询接口](http://127.0.0.1:10000/server1/info) ,可以看到返回结果的交替
