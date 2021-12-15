@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient(value = "eureka-client2")
 @Component
 public interface ClientFeign {
-    @GetMapping("info")
+    @GetMapping("/info")
     String getClientInfo();
 
 }
