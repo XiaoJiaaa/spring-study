@@ -12,6 +12,7 @@
         <module>spring-eureka-server</module>
         <module>spring-eureka-client1</module>
         <module>spring-eureka-client2</module>
+        <module>feign-api</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
