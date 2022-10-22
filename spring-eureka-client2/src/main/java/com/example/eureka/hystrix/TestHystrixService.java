@@ -9,6 +9,10 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class TestHystrixService {
 
+    public String isOk(Integer id) {
+        return "线程池：" + Thread.currentThread().getName() + "  deptInfo_Ok,id:   " + id;
+    }
+
     //一旦该方法失败并抛出了异常信息后，会自动调用  @HystrixCommand 注解标注的 fallbackMethod 指定的方法
     @HystrixCommand(fallbackMethod = "dept_TimeoutHandler", commandProperties =
             //规定 5 秒钟以内就不报错，正常运行，超过 5 秒就报错，调用指定的方法
