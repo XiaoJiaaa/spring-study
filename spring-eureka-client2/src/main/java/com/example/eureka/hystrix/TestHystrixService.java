@@ -2,11 +2,12 @@ package com.example.eureka.hystrix;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
 
+@Service
 public class TestHystrixService {
-
 
     //一旦该方法失败并抛出了异常信息后，会自动调用  @HystrixCommand 注解标注的 fallbackMethod 指定的方法
     @HystrixCommand(fallbackMethod = "dept_TimeoutHandler", commandProperties =
