@@ -22,7 +22,7 @@ public class TraceInterceptor implements HandlerInterceptor {
         }
         MDC.put("requestId", requestId);
         response.addHeader("requestId", requestId);
-        log.info("set requestId: {}", requestId);
+        // log.info("set requestId: {}", requestId);
         return true;
     }
 
