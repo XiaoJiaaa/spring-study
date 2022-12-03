@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class TraceConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new TraceInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(new TraceInterceptor()).addPathPatterns("/**")
+                .excludePathPatterns("/error");
     }
 }
