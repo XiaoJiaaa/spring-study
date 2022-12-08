@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 @EnableEurekaClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.*","trace"})
 @EnableFeignClients(basePackages = "api")
 @EnableAsync
 public class EurekaClient1Application {
