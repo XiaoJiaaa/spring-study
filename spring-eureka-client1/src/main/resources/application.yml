@@ -11,3 +11,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:9999/eureka/
+
+logging:
+  pattern:
+    console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%X{requestId}] [%thread] %logger{15} - %msg%n'
