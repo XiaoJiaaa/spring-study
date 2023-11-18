@@ -16,7 +16,7 @@ public class TraceInterceptor implements HandlerInterceptor {
 
 
     @Override
-    public boolean preHandle(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response, Object handler) throws Exception {
         if (handler instanceof HandlerMethod) {
             String requestId = request.getHeader("requestId");
             if (requestId == null || requestId.length() == 0) {
@@ -30,11 +30,11 @@ public class TraceInterceptor implements HandlerInterceptor {
     }
 
     @Override
-    public void postHandle(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+    public void postHandle(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
     }
 
     @Override
-    public void afterCompletion(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response, Object handler, Exception ex) throws Exception {
+    public void afterCompletion(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response, Object handler, Exception ex) throws Exception {
         MDC.remove("requestId");
     }
 }
