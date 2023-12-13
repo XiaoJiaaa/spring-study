@@ -1,15 +1,15 @@
 package com.example.eureka;
 
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.scheduling.annotation.EnableAsync;
 
-@EnableEurekaClient
 @SpringBootApplication(scanBasePackages = {"com.*","trace"})
-@EnableFeignClients(basePackages = "api")
+// @EnableFeignClients(basePackages = "api")
 @EnableAsync
+@EnableRabbit
 public class EurekaClient1Application {
 
     public static void main(String[] args) {
